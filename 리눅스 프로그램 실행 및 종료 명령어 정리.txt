@@ -1,0 +1,21 @@
+###  jar 파일 실행시키기
+
+# 백그라운드에서 실행이 되게끔(프로그램을 데몬처럼 실행하고 싶은 경우 "명령어 &"
+java -jar smartFactoryBackEnd-0.0.1-SNAPSHOT.jar &
+
+# nohup에 로그가 남게끔
+nohup java -jar smartFactoryBackEnd-0.0.1-SNAPSHOT.jar &
+
+### 프로세스 안전하게 종료시키기 
+ps -ef 명령어를 통해 PID 확인 후 
+kill -term PID 또는 kill -INT PID 또는 kill -2 PID
+
+### 프로세스 강제 종료시키기 (비권장) 
+kill -kill PID 또는 kill -9 PID
+
+### 아래 명령어를 통해 폴더에 읽기 쓰기 권한을 준다.
+sudo chmod -R 777 /DATA/smartFactoryBackEnd 
+
+### 현재 마운트 목록 확인 및 파일시스템의 전체크기, 사용중인 크기, 사용율 확인
+df -h	-> 	Disk Free의 약자
+df -P
